@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imagenes/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <a href="index.html">
+        <svg width="200" height="80">
+            <rect x="45" y="5" width="60" height="35" fill="rgb(240, 233, 210)" rx="5" class="logosvg-parte1"></rect>
+            <rect x="50" y="10" width="50" height="25" fill="rgb(73, 85, 121)" rx="5" class="logosvg-parte2"></rect>
+            <polygon points="55 45 ,95 45,115 62,30 62" fill="rgb(240, 233, 210)" class="logosvg-parte1"></polygon>
+            <polygon points="57 48 ,92 48,104 58,43 58" fill="rgb(73, 85, 121)" class="logosvg-parte2"></polygon>
+        </svg>
+    </a>
+    <ul class="menu">
+        <li class="botones-menu botones">
+            <a href="hoja2.html" class="link-menu botones">HISTORIA</a>
+        </li>
+        <li class="botones-menu botones">
+            <a href="hoja3.html" class="link-menu botones">JUGUEMOS</a>
+        </li>
+    </ul>
+</nav>
+    <header>
+        <h1>JUGUEMOS UN POCO</h1>
+    </header>
+    <main>
+        <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
+        <section class="juego">
+            <div class="cajas">
+                <div class="caja" id="caja1" ondragover="prevenirDefault(event)" ondrop="soltarCubo(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+                <div class="caja" id="caja2" ondragover="prevenirDefault(event)" ondrop="soltarCubo(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+                <div class="caja" id="caja3" ondragover="prevenirDefault(event)" ondrop="soltarCubo(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+            </div>
+            <div id="img-cajas">
+                <img class="img-rompecabezas" id="img-rompecabezas1" src="./assets/imagenes/Rompe1.png" alt="imagen-rompecabezas" ondragstart="inicioArraste(event)" ondragend="soltarImagen (event, 'img-rompecabezas1')">
+                <img class="img-rompecabezas" id="img-rompecabezas2" src="./assets/imagenes/rompe3.png" alt="imagen-rompecabezas" ondragstart="inicioArraste(event)" ondragend="soltarImagen (event, 'img-rompecabezas2')">
+                <img class="img-rompecabezas" id="img-rompecabezas3" src="./assets/imagenes/Rompe2.png" alt="imagen-rompecabezas" ondragstart="inicioArraste(event)" ondragend="soltarImagen (event, 'img-rompecabezas3')">
+            </div>
+        </section>
+        <button class="boton-reinicio-juego botones" onclick="reiniciarJuego (event)">Reiniciar</button>
+    </main>
+<footer>
+    <div class="footer-logo-h3">
+        <img id="logo" src="./assets/imagenes/logo.png" alt="logo">
+        <h3>
+            PROGRAMACIÓN 
+            <br>
+            E
+            <br>
+            HISTORIA
+        </h3>
+    </div>
+    <P>Sitio con fines educativos- Creado por Guadalupe López</P>
+</footer>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
+
